@@ -1,0 +1,21 @@
+#! /usr/bin/python
+
+"""Rebuild all list's archive."""
+
+import subprocess as subp
+import os
+
+def main(argv):
+
+
+    process = subp.Popen( ["list_list", "-b"],
+                   stdout=subp.PIPE,
+                   bufsize=1,
+                   universal_newlines=True)
+
+    for list_name in process.stdout:
+        subp.Popen(["/usr/lib/mailman/bin/arch", list_name])
+
+
+if __name__ == "__main__":
+   main(sys.argv[1:])
