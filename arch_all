@@ -1,5 +1,7 @@
 #! /usr/bin/python
 
+# Gregrio Corral Torres <gregorio.corral@uc3m.es>
+
 """Rebuild all list's archive."""
 
 import subprocess as subp
